@@ -11,10 +11,10 @@
 
 }
 
-#player1 td.active {
+#blue td.active {
   background-color: blue;
 }
 
-#player2 td.active {
-  background-color: red;
+#red td.active {
+  background-image: red;
 }
