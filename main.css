@@ -1,20 +1,22 @@
-.racer_table {
-  width: 80%;
-  margin-left: 10%;
-}
+
 
 .racer_table td {
   background-color: white;
-  height: 30px;
+  height: 40px;
+  width: 40px;
   border-style: solid;
   border-color: black;
 
 }
 
 #blue td.active {
-  background-color: blue;
+  background-image: url("bluecar.png");
+  background-repeat: no-repeat;
+  background-position: center; 
 }
 
 #red td.active {
-  background-color: red;
+  background-image: url("redcar.png");
+  background-repeat: no-repeat;
+  background-position: center; 
 }
