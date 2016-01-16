@@ -2,6 +2,8 @@
 
 // };
 
+
+// keydown event
 $(document).keydown(function(key){
   if (key.keyCode === 80) {
     console.log ("p");
