@@ -10,10 +10,6 @@
   border-bottom-color: black;
 }
 
-#final {
-  background-color: gray;
-  border-right-color: white;
-}
 
 #blue td.active {
   background-image: url("bluecar.png");
