@@ -5,8 +5,14 @@
   height: 40px;
   width: 40px;
   border-style: solid;
-  border-color: black;
+  border-color: transparent;
+  border-top-color: black;
+  border-bottom-color: black;
+}
 
+#final {
+  background-color: gray;
+  border-right-color: white;
 }
 
 #blue td.active {
