@@ -4,8 +4,16 @@ $(document).ready(function(){
   var blueMoves = 0;
 
   var trackLength = prompt("How long do you want the track to be?", "Set a track length between 10 - 30");
-  console.log (trackLength);
 
+  while (trackLength < 10 || trackLength > 30 || isNaN(trackLength)) {
+    var newTrackLength = prompt("You didn't enter a number between 10 - 30!", "20");
+    trackLength = newTrackLength;
+  };
+
+  for (var i = 1; i <= trackLength; i++) {
+      console.log(i);
+      $(".track").append("<td>");
+    };
 
   var restart = function() {
     $("td").removeClass("active");
@@ -16,10 +24,7 @@ $(document).ready(function(){
     blueMoves = 0;
   };
 
-    for (var i = 1; i <= trackLength; i++) {
-      console.log(i);
-      $(".track").append("<td>");
-    };
+    
 
   restart();
 
