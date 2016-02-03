@@ -12,6 +12,8 @@ td.active {
 }
 
 td {
+  height: 50px;
+  width: 40px;
   border-style: solid;
   border-right-style: solid;
   padding: 50px;

@@ -3,43 +3,33 @@
 //   var playerMoves = 0;
 //   var blueMoves = 0;
 $(document).ready(function(){
-  $('table#track > tbody td').keynavigator();
-
-  var trackLength = 100;
+  var trackLength = 4;
+  
   var moveCount = 0;
 
-  // $(document).on("keyup", function(key){
-  //   if (key.keyCode === 38) {
-  //     updatePlayerPosition("up");
-  //   } else if (key.keyCode === 37) {
-  //     updatePlayerPosition("left");
-  //   } else if (key.keyCode === 39) {
-  //     updatePlayerPosition("right");
-  //   }
+  var setTrackLength = function(){
 
-  // });
-  // $('tr.track-section td').keynavigator({
-  //   activeClass: 'active',
-  //   keys: {
-  //     up_arrow: 'up',
-  //     left_arrow: 'left',
-  //     right_arrow: 'right',
-  //   }
-  // });
-
-  var updatePlayerPosition = function (direction) {
-    console.log (direction);
-    // $('tr.track-section td').keynavigator({
-    //   activeClass: 'active',
-    //   keys: {
-    //     w: 'up',
-    //     a: 'left',
-    //     s: 'down',
-    //     d: 'right',
-    //   }
-    // });
+    while (trackLength <= 100) {
+      $("#track").prepend(
+          "<tr><td>Lane</td><td>Lane</td><td>Lane</td><td>Lane</td></tr>"
+      );
+      trackLength++
+    };
   };
 
+  var startGame = function() {
+    
+    $(document).on('keyup', function(key){
+      if (key.keyCode === 38) {
+        window.scrollBy(0, -53);
+        moveCount++;
+      };
+    });
+    $('table#track > tbody td').keynavigator();
+  };
+
+  setTrackLength();
+  startGame();
 
 });
 
