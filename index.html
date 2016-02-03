@@ -10,18 +10,41 @@
 
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="keynavigator-min.js"></script>
   <script src="main.js"></script>
   
 </head>
 <body>
 <div id = "main">
   <h1>JS racer</h1>
-  <p>Red: press 'P' <br> Blue: press 'Q'</p>
-  <table class="racer_table">
-    <tr class="track" id = "red">
-    </tr>
-    <tr class="track" id = "blue">
-    </tr>
+<!--   <p>Red: press 'P' <br> Blue: press 'Q'</p> -->
+  <table class="table" id="track">
+    <tbody>
+      <tr>
+        <td>Lane</td>
+        <td>Lane</td>
+        <td>Lane</td>
+        <td>Lane</td>
+      </tr>
+      <tr>
+        <td>Lane</td>
+        <td>Lane</td>
+        <td>Lane</td>
+        <td>Lane</td>
+      </tr>
+      <tr>
+        <td>Lane</td>
+        <td>Lane</td>
+        <td>Lane</td>
+        <td>Lane</td>
+      </tr>
+      <tr>
+        <td class="active">Lane</td>
+        <td>Lane</td>
+        <td>Lane</td>
+        <td>Lane</td>
+      </tr>
+    </tbody>
   </table>
 
 </div>

@@ -1,70 +1,103 @@
+// $(document).ready(function(){
+//   //start state
+//   var playerMoves = 0;
+//   var blueMoves = 0;
 $(document).ready(function(){
-  //start state
-  var redMoves = 0;
-  var blueMoves = 0;
+  $('table#track > tbody td').keynavigator();
 
-  var trackLength = prompt("How long do you want the track to be?", "Set a track length between 10 - 30");
+  var trackLength = 100;
+  var moveCount = 0;
 
-  while (trackLength < 10 || trackLength > 30 || isNaN(trackLength)) {
-    var newTrackLength = prompt("You didn't enter a number between 10 - 30!", "20");
-    trackLength = newTrackLength;
+  // $(document).on("keyup", function(key){
+  //   if (key.keyCode === 38) {
+  //     updatePlayerPosition("up");
+  //   } else if (key.keyCode === 37) {
+  //     updatePlayerPosition("left");
+  //   } else if (key.keyCode === 39) {
+  //     updatePlayerPosition("right");
+  //   }
+
+  // });
+  // $('tr.track-section td').keynavigator({
+  //   activeClass: 'active',
+  //   keys: {
+  //     up_arrow: 'up',
+  //     left_arrow: 'left',
+  //     right_arrow: 'right',
+  //   }
+  // });
+
+  var updatePlayerPosition = function (direction) {
+    console.log (direction);
+    // $('tr.track-section td').keynavigator({
+    //   activeClass: 'active',
+    //   keys: {
+    //     w: 'up',
+    //     a: 'left',
+    //     s: 'down',
+    //     d: 'right',
+    //   }
+    // });
   };
 
-  for (var i = 1; i <= trackLength; i++) {
-      console.log(i);
-      $(".track").append("<td>");
-    };
 
-  var restart = function() {
-    $("td").removeClass("active");
-    $("#blue td:first").addClass("active");
-    $("#red td:first").addClass("active");
+});
 
-    redMoves = 0;
-    blueMoves = 0;
-  };
+//   for (var i = 1; i <= trackLength; i++) {
+//       console.log(i);
+//       $(".track").append("<td>");
+//     };
+
+//   var restart = function() {
+//     $("td").removeClass("active");
+//     $("#blue td:first").addClass("active");
+//     $("#red td:first").addClass("active");
+
+//     redMoves = 0;
+//     blueMoves = 0;
+//   };
 
     
 
-  restart();
+//   restart();
 
-  // keydown event
-  $(document).on('keyup', function(key){
+//   // keydown event
+//   $(document).on('keyup', function(key){
 
-    if (key.keyCode === 80) {
+//     if (key.keyCode === 38) {
 
-      if (redMoves < trackLength - 1){
-        updatePlayerPosition("red");
-        redMoves++;
-      } else {
-        winnerBox("Red")
-      };
+//       if (playerMoves < trackLength - 1){
+//         updatePlayerPosition("red");
+//         redMoves++;
+//       } else {
+//         winnerBox("Red")
+//       };
 
-    } else if (key.keyCode === 81) {
+//     } else if (key.keyCode === 81) {
 
-      if (blueMoves < trackLength - 1){
-        updatePlayerPosition("blue");
-        blueMoves++;
+//       if (blueMoves < trackLength - 1){
+//         updatePlayerPosition("blue");
+//         blueMoves++;
 
-      } else {
-        winnerBox("Blue")
-      };
-    };
-  });
+//       } else {
+//         winnerBox("Blue")
+//       };
+//     };
+//   });
 
-  //move active td
-  var updatePlayerPosition = function (playerColor) {
-    var activeCell = $("#" + playerColor + " td.active");
-    var moveCell = activeCell.next();
+//   //move active td
+//   var updatePlayerPosition = function (playerColor) {
+//     var activeCell = $("#" + playerColor + " td.active");
+//     var moveCell = activeCell.next();
 
-    activeCell.removeClass("active");
-    moveCell.addClass("active");
-  };
+//     activeCell.removeClass("active");
+//     moveCell.addClass("active");
+//   };
 
-  //winning state
-  var winnerBox = function (winner) {
-    window.alert (winner + " wins! Press OK to play again.")
-    restart();
+//   //winning state
+//   var winnerBox = function (winner) {
+//     window.alert (winner + " wins! Press OK to play again.")
+//     restart();
 
-  };
-});
+//   };
+// });
