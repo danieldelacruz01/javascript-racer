@@ -1,12 +1,12 @@
 
 td.active {
-  background-image: url("bluecar.png");
+  background-image: url("car.png");
   background-repeat: no-repeat;
   background-position: center; 
 }
 
-#red td.active {
-  background-image: url("redcar.png");
+td.obstacle {
+  background-color: red;
   background-repeat: no-repeat;
   background-position: center; 
 }
@@ -14,8 +14,6 @@ td.active {
 td {
   height: 50px;
   width: 40px;
-  border-style: solid;
-  border-right-style: solid;
   padding: 50px;
 }
 
@@ -24,44 +22,9 @@ td {
 }
 
 /*Track lanes*/
-
-.left {
-  background-color: white;
-  height: 50px;
-  width: 40px;
-  border-style: solid;
-  border-left-color: black;
-  border-right-style: dashed;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
+td.one, td.three {
+  border-style: none dashed none solid;
 }
-.middle-left {
-  background-color: white;
-  height: 50px;
-  width: 40px;
-  border-style: solid;
-  border-left-color: black;
-  border-left-style: dashed;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-}
-.middle-right {
-  background-color: white;
-  height: 50px;
-  width: 40px;
-  border-style: solid;
-  border-left-color: black;
-  border-right-style: dashed;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-}
-.right {
-  background-color: white;
-  height: 50px;
-  width: 40px;
-  border-style: solid;
-  border-left-color: black;
-  border-left-style: dashed;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
+td.two, td.four {
+  border-style: none solid none dashed;
 }
