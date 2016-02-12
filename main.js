@@ -35,7 +35,13 @@ $(document).ready(function(){
         }
       };
       if ($("td.active").hasClass("obstacle")) {
-        console.log("ouch");
+        var playAgain = confirm("You crashed and died! Play again?");
+        if (playAgain == true) {
+          location.reload();
+        } else if (playAgain == false){
+          window.open("http://www.lifehacker.com/top-10-ways-to-become-a-better-driver-1596820145", "_self");
+        }
+
       }
     });
     $('table#track > tbody td').keynavigator();
@@ -44,4 +50,5 @@ $(document).ready(function(){
   setTrackLength();
   createObstacles();
   startGame();
+
 });
