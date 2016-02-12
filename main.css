@@ -28,3 +28,7 @@ td.one, td.three {
 td.two, td.four {
   border-style: none solid none dashed;
 }
+
+td.finish {
+  background-color: green;
+}
