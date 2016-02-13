@@ -31,4 +31,10 @@ td.two, td.four {
 
 td.finish {
   background-color: green;
+  text-align: center;
+}
+td.start {
+  background-color: green;
+  color: white;
+  text-align: center;
 }
